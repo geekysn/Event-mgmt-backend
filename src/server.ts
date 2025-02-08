@@ -30,7 +30,7 @@ app.use(cors(corsOptions))
 app.use(express.json())
 app.use(rateLimiter)
 
-console.log("first middleware")
+// console.log("first middleware")
 
 app.use((req: Request, res: Response, next: NextFunction) => {
   res.header("Access-Control-Allow-Origin", "http://localhost:5173")

@@ -25,7 +25,7 @@ router.post("/", authenticateJWT, upload.single('image'), validateEventCreation,
   try {
     const { name, description, date, venue, category, capacity } = req.body
     // console.log(name, description, date, venue, category, capacity, req.file)
-    console.log(req.user)
+    // console.log(req.user)
     if (!req.user?.userId) {
       res.status(401).json({ message: "User not authenticated" })
       return; 
